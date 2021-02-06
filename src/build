@@ -1,2 +1,22 @@
 #esp82xxarduino-build -L $(pwd)/../lib -D _WIFIMANAGER=1 -D _PIN_OUT=1 -D AP_NAME=\"Gway-Things4U\" -D AP_PASSWD=\"calvincalvin\" -D _USE_LITTLEFS=1 "$@" -D _OLED=2
-esp82xxarduino-build -4 -F -L $(pwd)/../lib -D _WIFIMANAGER=0 -D _PIN_OUT=6 -D AP_NAME=\"Gway-Things4U\" -D AP_PASSWD=\"calvincalvin\" -D _USE_LITTLEFS=1 "$@" -D _OLED=2
+
+esp82xxarduino-build -4 -F -L $(pwd)/../lib \
+    -D _WIFIMANAGER=0 \
+    -D AP_NAME=\"Gway-Things4U\" \
+    -D AP_PASSWD=\"calvincalvin\" \
+    -D _USE_LITTLEFS=1 \
+    -D _OLED=0 \
+    -D _MONITOR=1 \
+    -D _OTA=0 \
+    -D _LOCALSERVER=1 \
+    -D _GATEWAYNODE=0 \
+    -D _TRUSTED_NODES=0 \
+    -D _RX2_SF=7 \
+    -D _STRICT_1CH=2 \
+    -D _PIN_OUT=6 \
+    -D USERDIO0=D2 \
+    -D USERDIO1=D1 \
+    -D USERDIO2=-1 \
+    -D USERNSS=D5 \
+    -D USERRST=-1 \
+    "$@"

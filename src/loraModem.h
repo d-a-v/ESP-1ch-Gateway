@@ -281,11 +281,11 @@ struct pins {
 #elif _PIN_OUT==6
 
 struct pins {
-	uint8_t dio0=2;		// GPIO2 / D4. shared between DIO0/DIO1/DIO2
-	uint8_t dio1=2;		// GPIO2 / D4. Used for CAD, may or not be shared with DIO0
-	uint8_t dio2=2;		// GPIO2 / D4. Used for frequency hopping, don't care
-	uint8_t ss=16;		// GPIO16 / D0. Select pin connected to GPIO16 / D0
-	uint8_t rst=0;		// GPIO 0 / D3. Reset pin not used
+	uint8_t dio0=USERDIO0;		// DIO0 can be shared
+	uint8_t dio1=USERDIO1;		// DIO1 can be shared
+	uint8_t dio2=USERDIO2;		// DIO2 can be shared
+	uint8_t ss=USERNSS;		    // slave select
+	uint8_t rst=USERRST;		// RST Reset pin not used
 	// MISO 12 / D6
 	// MOSI 13 / D7
 	// CLK  14 / D5
