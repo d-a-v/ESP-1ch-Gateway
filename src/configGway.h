@@ -367,8 +367,12 @@
 // and need no changing. When _REPEATER function is selected, we do not
 // use the backend function to send message to server over MQTT.
 #if _REPEATER==0
+#ifndef _TTNSERVER
 #	define _TTNSERVER "router.eu.thethings.network"
+#endif
+#ifndef _TTNPORT
 #	define _TTNPORT 1700							// Standard port for TTN
+#endif
 #endif
 
 #if _USE_LITTLEFS==1
