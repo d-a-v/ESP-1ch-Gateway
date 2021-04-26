@@ -23,4 +23,5 @@ esp82xxarduino-build -4 -F -L $(pwd)/../lib \
     -D USERDIO2=-1 \
     -D USERNSS=D0 \
     -D USERRST=-1 \
+    -D _TTNSERVER=\"10.0.1.2\" \
     "$@"
