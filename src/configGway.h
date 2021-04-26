@@ -131,7 +131,7 @@
 // Using this function means that we HAVE to use more dio pins on the RFM95/sx1276
 // device and also connect enable dio1 to detect this state. 
 #ifndef _CAD
-#define _CAD 1
+#define _CAD 0
 #endif
 
 // CRCCHECK
@@ -139,7 +139,7 @@
 // This should prevent us from getting a lot os stranges messgages of unknown nodes.
 // Note: DIO3 must be connected for this to work (Heltec and later Wemos gateways). 
 #ifndef _CRCCHECK
-#define _CRCCHECK 1
+#define _CRCCHECK 0
 #endif
 
 // Definitions for the admin webserver.
@@ -264,7 +264,7 @@
 // 1: _LOCALSERVER is used for received messages
 // 2: Also transmittes messages are encoded
 #if !defined _LOCALSERVER
-#	define _LOCALSERVER 1					// See server definitions for decodes
+#	define _LOCALSERVER 0					// See server definitions for decodes
 #endif
 
 
@@ -297,7 +297,7 @@
 // 2: Same as 1, but is nodes NOT in the nodes list below they are NOT shown
 // NOTE: We probably will make this list dynamic!
 #ifndef _TRUSTED_NODES
-#define _TRUSTED_NODES 1
+#define _TRUSTED_NODES 0
 #endif
 
 // ========================================================================
